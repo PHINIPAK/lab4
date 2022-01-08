@@ -1,29 +1,28 @@
 <?php
     if(isset($_POST['submit'])){  
-    $sideA = $_POST['sideA'];
-    $sideB = $_POST['sideB'];
-    $sideC = $_POST['sideC'];    
+    $price = $_POST['price'];
+    $consumption = $_POST['consumption'];
+    $coefficient = $_POST['coefficient'];    
      } 
-    if(!is_numeric($sideA) || !is_numeric($sideB) || !is_numeric($sideC)){
+    if(!is_numeric($price) || !is_numeric($consumption) || !is_numeric($coefficient)){
      
-        $error_result = "Операнды должны быть числами"; // инициализируем переменную с ошибкой
+        $error_result = "РћРґРЅР° РёР· РїРµСЂРµРјРµРЅРЅС‹С… РЅРµ СЏРІР»СЏРµС‚СЃСЏ С‡РёСЃР»РѕРІС‹Рј"; 
     }
     
-    $Cube = "Ничего";
-    $V = $sideA * $sideB * $sideC;    
-    if($sideA == $sideB && $sideA == $sideC){
-    $Cube = "The object is a cube";
+      
+    if(($price > 0) && ($coefficient> 0) && ($consumption>0)){
+    $result = $price * $coefficient*$consumption;
     }
     else{
-    $Cube = "The object is not a cube";
+        $result = $price*$consumption;
     }
-    $result = $V;
+    
     
     if(isset($error_result)) {
-    echo "Ошибка: $error_result";
+    echo "Error: $error_result";
         }    
     else {
-    echo "V = $result, $Cube";
+    echo "Total = $result";
     }
 ?>          
                      

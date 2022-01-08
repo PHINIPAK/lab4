@@ -35,7 +35,7 @@
     <p></p>
     <!-- Begin page content -->
     <main role="main" class="container">
-      <h1 class="mt-5">Вычислить объем тела со сторонами A, B, C и определить, является ли данное геометрическое тело кубом.</h1>
+    <h1 class="mt-5">Рассчитать сумму оплаты за потребленную энергию.</h1>
 
     </main>
    
@@ -43,13 +43,13 @@
  <form action="result.php" method="POST">
   <div class="row">
     <div class="col">
-      <input type="text" class="form-control" name="sideA" placeholder="Сторона А">
-      <input type="text" class="form-control" name="sideB" placeholder="Сторона В">
-      <input type="text" class="form-control" name="sideC" placeholder="Сторона С">      
+      <input type="text" class="form-control" name="price" placeholder="Стоимость">
+      <input type="text" class="form-control" name="consumption" placeholder="Расход">
+      <input type="text" class="form-control" name="coefficient" placeholder="Коэффициент">      
     </div>        
   </div>
   <p></p>
-  <button type="submit" name="submit" class="btn btn-primary">Посчитать</button>  
+  <button type="submit" name="submit" class="btn btn-primary">Посчитать</button>
  </form>   
 <footer class="footer">
 
